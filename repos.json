@@ -1,1 +1,45 @@
-[]
+[
+  {
+      "kernelSource": {
+        "name": "gauguin_KernelSU",
+        "repo": "https://github.com/haha647/neko_kernel_xiaomi_gauguin",
+        "branch": "miui-14",
+        "device": "gauguin",
+        "defconfig": "gauguin_user_defconfig"
+      },
+      "withKernelSU": true,
+      "toolchains": [
+        {
+          "repo": "https://github.com/CruelKernel/samsung-exynos9820-toolchain/",
+          "branch": "google",
+          "name": "google",
+          "binPath": ["./aarch64-linux-android-4.9/bin", "llvm/bin"]
+        }
+      ],
+      "params": {
+        "ARCH": "arm64",
+        "CC": "google/llvm/bin/clang",
+        "externalCommand": {
+          "CROSS_COMPILE": "google/aarch64-linux-android-4.9/bin/aarch64-linux-android-",
+          "CLANG_TRIPLE": "google/llvm/bin/aarch64-linux-android-",
+          "LD": "google/llvm/bin/ld.lld",
+          "AR": "google/llvm/bin/llvm-ar",
+          "NM": "google/llvm/bin/llvm-nm",
+          "OBJCOPY": "google/llvm/bin/llvm-objcopy",
+          "OBJDUMP": "google/llvm/bin/llvm-objdump",
+          "READELF": "google/llvm/bin/llvm-readelf",
+          "OBJSIZE": "google/llvm/bin/llvm-size",
+          "STRIP": "google/llvm/bin/llvm-strip",
+          "LDGOLD": "google/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld.gold",
+          "LLVM_AR": "google/llvm/bin/llvm-ar",
+          "LLVM_DIS": "google/llvm/bin/llvm-dis"
+        }
+      },
+      "AnyKernel3": {
+        "use": false,
+        "release": true,
+        "repo": "https://github.com/easterNday/AnyKernel3/",
+        "branch": "thyme"
+      }
+}
+]
