@@ -1,11 +1,11 @@
 [
     {
       "kernelSource": {
-        "name": "OnePlus_KernelSU",
-        "repo": "https://github.com/tangalbert919/android_kernel_oneplus_sm8450",
-        "branch": "lineage-19.1",
-        "device": "gki",
-        "defconfig": "gki_defconfig"
+        "name": "gauguin_KernelSU",
+        "repo": "https://github.com/haha647/neko_kernel_xiaomi_gauguin",
+        "branch": "miui-14",
+        "device": "gauguin",
+        "defconfig": "gauguin_user_defconfig"
       },
       "withKernelSU": true,
       "toolchains": [
